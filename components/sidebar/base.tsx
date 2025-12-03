@@ -146,16 +146,14 @@ export function SidebarContent({
 	const timerRef = useRef(0)
 
 	useOnChange(collapsed, () => {
-		if (collapsed) {
-			setHover(false)
-		}
+		if (collapsed) setHover(false)
 	})
 
 	if (mode !== 'full') {
 		return
 	}
 
-	const shouldIgnoreHover = (e: PointerEvent) => {
+	function shouldIgnoreHover(e: PointerEvent): boolean {
 		const element = ref.current
 		if (!element) {
 			return true
@@ -230,7 +228,7 @@ export function SidebarDrawerContent({
 		<Presence present={open}>
 			{({ present }) => (
 				<aside
-					id="nd-sidebar-mobile"
+					id="na-sidebar-mobile"
 					data-state={state}
 					className={cn(!present && 'invisible', className)}
 					{...props}

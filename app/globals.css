@@ -3,6 +3,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --na-sidebar-drawer-offset: 100%;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -44,6 +48,22 @@
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --fd-docs-row-1: 0px;
+  --fd-docs-height: 100dvh;
+  --fd-sidebar-width: 268px;
+  --na-popover-height: 0px;
+
+  --animate-na-fade-in: na-fade-in 300ms ease;
+  --animate-na-fade-out: na-fade-out 300ms ease;
+
+  --animate-na-sidebar-in: na-sidebar-in 250ms ease;
+  --animate-na-sidebar-out: na-sidebar-out 250ms ease;
+
+  --animate-na-collapsible-down: na-collapsible-down 150ms
+    cubic-bezier(0.45, 0, 0.55, 1);
+  --animate-na-collapsible-up: na-collapsible-up 150ms
+    cubic-bezier(0.45, 0, 0.55, 1);
 }
 
 :root {
@@ -342,4 +362,54 @@
   --chart-3: oklch(0.7 0.15 70);
   --chart-4: oklch(0.55 0.18 55);
   --chart-5: oklch(0.75 0.22 65);
+}
+
+@keyframes na-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes na-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes na-sidebar-in {
+  from {
+    transform: translateX(var(--na-sidebar-drawer-offset));
+  }
+}
+
+@keyframes na-sidebar-out {
+  to {
+    transform: translateX(var(--na-sidebar-drawer-offset));
+  }
+}
+
+@keyframes na-collapsible-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes na-collapsible-up {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
 }
