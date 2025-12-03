@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation'
 import {
 	type ComponentProps,
 	createContext,
+	type PointerEvent,
 	type ReactNode,
 	type RefObject,
 	use,
@@ -146,7 +147,9 @@ export function SidebarContent({
 	const timerRef = useRef(0)
 
 	useOnChange(collapsed, () => {
-		if (collapsed) setHover(false)
+		if (collapsed) {
+			setHover(false)
+		}
 	})
 
 	if (mode !== 'full') {
