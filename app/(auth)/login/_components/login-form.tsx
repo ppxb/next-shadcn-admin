@@ -74,7 +74,7 @@ export function LoginForm({
 									Login
 								</Button>
 							</Field>
-							<FieldSeparator className="*:data-[slot=field-separator-content]:bg-card">
+							<FieldSeparator className="text-[12px] font-bold *:data-[slot=field-separator-content]:bg-card [&_.absolute]:top-2">
 								OR CONTINUE WITH
 							</FieldSeparator>
 							<Field className="grid grid-cols-3 gap-4">
