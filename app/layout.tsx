@@ -3,7 +3,6 @@ import { GeistSans } from 'geist/font/sans'
 import type { Metadata } from 'next'
 
 import { ThemeProvider } from '@/components/theme-provider'
-import { ThemeToggle } from '@/components/theme-toggler'
 
 import './globals.css'
 
@@ -24,14 +23,14 @@ export default function RootLayout({
 						__html: `
               try {
                 const savedColorTheme = localStorage.getItem('color-theme') || 'neutral';
-                if (savedColorTheme !== 'neutral') {
-                  document.documentElement.classList.add('theme-' + savedColorTheme);
-                }
+								const theme = localStorage.getItem('theme') || 'light';
+                const isDark = theme === 'dark' || 
+                     (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
                 
-                const savedTheme = localStorage.getItem('theme') || 'light';
-                if (savedTheme === 'dark' || (savedTheme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                  document.documentElement.classList.add('dark');
-                }
+                const classes = [];
+                if (colorTheme !== 'neutral') classes.push('theme-' + colorTheme);
+								if (isDark) classes.push('dark');
+								if (classes.length) document.documentElement.classList.add(...classes);
               } catch (_) {}
             `
 					}}
@@ -46,7 +45,6 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
-					<ThemeToggle />
 					{children}
 				</ThemeProvider>
 			</body>

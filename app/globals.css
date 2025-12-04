@@ -49,11 +49,6 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --fd-docs-row-1: 0px;
-  --fd-docs-height: 100dvh;
-  --fd-sidebar-width: 268px;
-  --na-popover-height: 0px;
-
   --animate-na-fade-in: na-fade-in 300ms ease;
   --animate-na-fade-out: na-fade-out 300ms ease;
 
