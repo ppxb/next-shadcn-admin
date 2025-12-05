@@ -59,6 +59,11 @@
     cubic-bezier(0.45, 0, 0.55, 1);
   --animate-na-collapsible-up: na-collapsible-up 150ms
     cubic-bezier(0.45, 0, 0.55, 1);
+
+  --color-fd-card: hsl(0, 0%, 94.7%);
+  --color-fd-card-foreground: hsl(0, 0%, 3.9%);
+  --color-fd-muted: hsl(0, 0%, 96.1%);
+  --color-fd-muted-foreground: hsl(0, 0%, 45.1%);
 }
 
 :root {
@@ -128,6 +133,11 @@
   --sidebar-accent-foreground: oklch(0.985 0.001 106.423);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.553 0.013 58.071);
+
+  --color-fd-muted: hsl(0, 0%, 12.9%);
+  --color-fd-muted-foreground: hsla(0, 0%, 70%, 0.8);
+  --color-fd-card: hsl(0, 0%, 9.8%);
+  --color-fd-card-foreground: hsl(0, 0%, 98%);
 }
 
 @layer base {

@@ -19,7 +19,7 @@ export function LayoutBody({
 		<div
 			id="na-layout"
 			className={cn(
-				'grid transition-[grid-template-columns] overflow-x-clip min-h-(--fd-docs-height) auto-cols-auto auto-rows-auto [--fd-docs-height:100dvh] [--fd-header-height:0px] [--fd-sidebar-width:0px] [--na-popover-height:0px]',
+				'grid transition-[grid-template-columns] overflow-x-clip h-(--fd-docs-height) auto-cols-auto auto-rows-auto [--fd-docs-height:100dvh] [--fd-header-height:0px] [--fd-sidebar-width:0px] [--na-popover-height:0px]',
 				className
 			)}
 			data-sidebar-collapsed={collapsed}
