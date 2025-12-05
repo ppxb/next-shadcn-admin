@@ -60,7 +60,7 @@ export function SidebarContent({
 							data-collapsed={collapsed}
 							data-hovered={collapsed && hovered}
 							className={cn(
-								'absolute flex flex-col w-full start-0 inset-y-0 items-end bg-fd-card text-sm border-e duration-250 *:w-(--fd-sidebar-width)',
+								'absolute flex flex-col w-full start-0 inset-y-0 items-end bg-card text-sm border-e duration-250 *:w-(--fd-sidebar-width)',
 								collapsed && [
 									'inset-y-2 rounded-xl transition-transform border w-(--fd-sidebar-width)',
 									hovered
@@ -82,7 +82,7 @@ export function SidebarContent({
 					<div
 						data-sidebar-panel=""
 						className={cn(
-							'fixed flex top-[calc(--spacing(4)+var(--na-popover-height))] start-4 shadow-lg transition-opacity rounded-xl p-0.5 border bg-fd-muted text-fd-muted-foreground z-10',
+							'fixed flex top-[calc(--spacing(4)+var(--na-popover-height))] start-4 shadow-lg transition-opacity rounded-xl p-0.5 border bg-muted text-fd-muted-foreground z-10',
 							(!collapsed || hovered) && 'pointer-events-none opacity-0'
 						)}
 					>

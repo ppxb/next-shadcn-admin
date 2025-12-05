@@ -60,8 +60,8 @@ export default function DashboardLayout({
 					</SidebarViewport>
 				</SidebarContent>
 
-				<main className="[grid-area:main] overflow-y-auto p-2">
-					<div className="bg-white dark:bg-black rounded-xl">
+				<main className="[grid-area:main] bg-secondary overflow-y-auto p-2">
+					<div className="bg-white dark:bg-black rounded-xl shadow-sm">
 						<ThemeToggle />
 						{children}
 					</div>
