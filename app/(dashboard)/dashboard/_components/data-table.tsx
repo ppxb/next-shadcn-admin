@@ -5,6 +5,7 @@ import { z } from 'zod'
 
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
+import { useState } from 'react'
 
 export const schema = z.object({
 	id: z.number(),
@@ -62,4 +63,8 @@ export function DataTable({
 	data: initialData
 }: {
 	data: z.infer<typeof schema>[]
-}) {}
+}) {
+	const [data, setData] = useState(() => initialData)
+  const [rowSelection, setRowSelection] = useState({})
+}
+
