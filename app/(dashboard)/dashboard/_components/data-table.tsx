@@ -65,6 +65,5 @@ export function DataTable({
 	data: z.infer<typeof schema>[]
 }) {
 	const [data, setData] = useState(() => initialData)
-  const [rowSelection, setRowSelection] = useState({})
 }
 
