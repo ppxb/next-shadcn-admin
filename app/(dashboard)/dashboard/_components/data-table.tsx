@@ -1,11 +1,10 @@
 import { useSortable } from '@dnd-kit/sortable'
 import { ColumnDef } from '@tanstack/react-table'
 import { GripVertical } from 'lucide-react'
+import { useState } from 'react'
 import { z } from 'zod'
-
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
-import { useState } from 'react'
 
 export const schema = z.object({
 	id: z.number(),
@@ -66,4 +65,3 @@ export function DataTable({
 }) {
 	const [data, setData] = useState(() => initialData)
 }
-
